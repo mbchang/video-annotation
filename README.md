@@ -1,22 +1,18 @@
 # Video Annotation
 Quickly annotate videos with bounding boxes for use in training object detectors and trackers. Keyboard commands for ease of navigation.
 
-Paths
-=========
+## Paths
 - Make sure ```video-annotation``` is your root folder in MATLAB, and add all subfolders to path.
 - Videos go in ```data/videos```
 - Bounding boxes will be saved in ```data/positive_examples```
 
-Setup
-=====
+## Setup
 Use ```convert_to_MAT.m``` to convert your video file to a matfile. Make sure to configure the correct paths
 
-Annotation
-==========
+## Annotation
 The main file is ```KeyboardAnnotationSimple.m```, which contains usage instructions.
 
-Navigation Commands
--------------------
+## Navigation Commands
 - ```g```: move forward a frame in the video 
 - ```f```: move backward a frame in the video
 - ```q```: quit
