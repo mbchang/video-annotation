@@ -12,7 +12,7 @@ Use ```convert_to_MAT.m``` to convert your video file to a matfile. Make sure to
 ## Annotation
 The main file is ```KeyboardAnnotationSimple.m```, which contains usage instructions.
 
-## Navigation Commands
+### Navigation Commands
 - ```g```: move forward a frame in the video 
 - ```f```: move backward a frame in the video
 - ```q```: quit
