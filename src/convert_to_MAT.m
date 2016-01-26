@@ -1,6 +1,6 @@
 % use ls or dir to specifically match *.avi files
-addpath('/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra')
-files = dir(fullfile('/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/*.mov'));
+addpath('data')
+files = dir(fullfile('data/videos/*.mov'));
 
 for f = 1:size(files); 
 
@@ -13,7 +13,7 @@ for f = 1:size(files);
 
     % now we just want the name minus the ext
     [pathstr,name,ext] = fileparts(file.name);
-    fout = ['/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/matfiles/',name,'.mat'];
+    fout = ['data/matfiles/',name,'.mat'];
     save(fout,'video', '-v7.3');
     
     % It will be saved in a .mat file, call it f. size(f.video) will return

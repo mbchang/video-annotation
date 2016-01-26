@@ -1,7 +1,7 @@
 annotation = 0;
 
-addpath('/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/matfiles')
-files = dir(fullfile('/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/matfiles/*.mat'));
+addpath('data/matfiles')
+files = dir(fullfile('data/matfiles/*.mat'));
 
 for f = 1:size(files); 
     file = files(f);  % pick one file

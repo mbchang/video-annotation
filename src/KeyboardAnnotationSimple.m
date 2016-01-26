@@ -47,5 +47,5 @@ disp('Press q to continue');
 
 %% Save Annotations
 disp('Saving...');
-save(['/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/positive_examples/' name '_' category '.mat'],'positive_examples');%, '-v7.3');
-save(['/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/frame_types/' name '_' category '.mat'],'frame_types');%, '-v7.3');
+save(['data/positive_examples/' name '_' category '.mat'],'positive_examples');%, '-v7.3');
+save(['data/frame_types/' name '_' category '.mat'],'frame_types');%, '-v7.3');

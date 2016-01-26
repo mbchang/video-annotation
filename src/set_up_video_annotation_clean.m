@@ -16,12 +16,14 @@ function [videoStepper, videoPlayer, pointTracker, positive_examples, frame_type
     %% Set up Paths
     ext = '.mat';
     filename = [file ext];
+    
+    % current working directory should be VideoAnnotationTool
         
-    working_directory = '/Users/MichaelChang/Documents/Researchlink/Michigan Research/VideoAnnotationTool'; % current working directory
-    data_directory = '/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/matfiles'; % contains videos in matfile format, where the video is saved in variable called 'video'
-
-    addpath(working_directory);
-    addpath(data_directory);
+    working_directory = '.'; % current working directory
+    data_directory = 'data'; % contains videos in matfile format, where the video is saved in variable called 'video'
+    
+    addpath(genpath(working_directory));
+    addpath(genpath(data_directory));
 
     %% Initialize Objects
     
@@ -55,8 +57,8 @@ function [videoStepper, videoPlayer, pointTracker, positive_examples, frame_type
     metaparameters.TRACKING_THRESHOLD = 5;
 
     %% Create Files to Cache Info  
-    pos_ex_file_name = ['/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/positive_examples/' file '_' category '.mat'];
-    frame_types_file_name = ['/Users/MichaelChang/Documents/Researchlink/Michigan Research/Datasets/Extra/frame_types/' file '_' category '.mat'];
+    pos_ex_file_name = [data_directory '/positive_examples/' file '_' category '.mat'];
+    frame_types_file_name = [data_directory '/frame_types/' file '_' category '.mat'];
     
     if exist( pos_ex_file_name, 'file' )
         disp('existed')
